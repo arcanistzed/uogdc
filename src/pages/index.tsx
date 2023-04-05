@@ -31,23 +31,20 @@ export default function Home() {
 				<Image src="/images/logo.png" alt="Logo" height={200} width={200} />
 				<h1 className="text-8xl font-bold text-dark">{t("title")}</h1>
 				<h2 className="text-2xl font-bold text-almost-dark">{t("subtitle")}</h2>
-				<nav
-					className="flex items-center justify-center gap-8"
-					aria-label="Socials"
-				>
+				<nav className="flex items-center justify-center gap-8" aria-label="Socials">
 					<a
 						href="https://www.instagram.com/uogamedev/"
 						target="_blank"
 						rel="noreferrer"
-						className="w-8 text-3xl transition-colors duration-500 text-dark-red hover:text-light-red"
+						className="w-8 text-3xl text-dark-red transition-colors duration-500 hover:text-light-red"
 					>
 						<FontAwesomeIcon icon={faInstagram} />
 					</a>
 					<a
-						href="https://discord.gg/8Y4Y4Y4"
+						href="https://discord.gg/sMf6UJdnyw"
 						target="_blank"
 						rel="noreferrer"
-						className="w-8 text-3xl transition-colors duration-500 text-dark-red hover:text-light-red"
+						className="w-8 text-3xl text-dark-red transition-colors duration-500 hover:text-light-red"
 					>
 						<FontAwesomeIcon icon={faDiscord} />
 					</a>
@@ -55,7 +52,7 @@ export default function Home() {
 						href="mailto:info@uogdc.com"
 						target="_blank"
 						rel="noreferrer"
-						className="w-8 text-3xl transition-colors duration-500 text-dark-red hover:text-light-red"
+						className="w-8 text-3xl text-dark-red transition-colors duration-500 hover:text-light-red"
 					>
 						<FontAwesomeIcon icon={faEnvelope} />
 					</a>
