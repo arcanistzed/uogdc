@@ -7,6 +7,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
 	return {
@@ -18,6 +19,22 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 
 export default function Home() {
 	const { t } = useTranslation();
+
+	const [img, setImg] = useState("/images/mac_run.gif");
+
+	useEffect(() => {
+		const handleKeyDown = (event: KeyboardEvent) => {
+			console.log(event.key)
+			if (event.key === " ") {
+				setImg(
+					"/images/mac_run.gif" !== img ? "/images/mac_run.gif" : "/images/mac_dead.png",
+				);
+			}
+		};
+
+		window.addEventListener("keydown", handleKeyDown);
+		return () => window.removeEventListener("keydown", handleKeyDown);
+	}, [img]);
 
 	return (
 		<>
@@ -59,11 +76,21 @@ export default function Home() {
 				</nav>
 			</main>
 			<Image
-				src="/images/mac_run.gif"
+				src={img}
 				alt="Mac running"
 				width={500}
 				height={500}
 				className="absolute bottom-0 w-20 animate-move-horizontal"
+				style={{
+					animationPlayState: img !== "/images/mac_run.gif" ? "paused" : "running",
+				}}
+				onClick={() => {
+					setImg(
+						"/images/mac_run.gif" !== img
+							? "/images/mac_run.gif"
+							: "/images/mac_dead.png",
+					);
+				}}
 			/>
 		</>
 	);
