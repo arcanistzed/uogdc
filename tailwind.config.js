@@ -8,7 +8,7 @@ module.exports = {
 				"dark-red": "#931910",
 				yellow: "#ffbf39",
 				dark: "#2a2a2a",
-				"almost-dark": "##544746",
+				"almost-dark": "#544746",
 			},
 			animation: {
 				"move-horizontal": "move-horizontal 10s linear infinite",

@@ -5,6 +5,6 @@
 html,
 body,
 #__next {
-    overflow-x: hidden;
+    overflow: hidden;
     height: 100%;
 }
