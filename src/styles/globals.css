@@ -7,4 +7,5 @@ body,
 #__next {
     overflow: hidden;
     height: 100%;
+    color-scheme: dark;
 }

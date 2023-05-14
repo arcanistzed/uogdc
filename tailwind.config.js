@@ -4,11 +4,11 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				"light-red": "#e53526",
-				"dark-red": "#931910",
-				yellow: "#ffbf39",
-				dark: "#2a2a2a",
-				"almost-dark": "#544746",
+				gray: "hsl(0, 0%, 50%)",
+				red: "hsl(5, 80%, 50%)",
+				yellow: "hsl(40, 100%,60%)",
+				dark: "hsl(0, 0%, 16%)",
+				"almost-dark": "hsl(5, 10%, 30%)",
 			},
 			animation: {
 				"move-horizontal": "move-horizontal 10s linear infinite",
